@@ -15,6 +15,7 @@ export default class Document extends NextDocument {
 
           <style jsx>{`
             @import 'tachyons/src/tachyons';
+            @custom-media --breakpoint-not-small screen and (min-width: 48em);
             html, body {
               height: 100%;
               background: navy;
