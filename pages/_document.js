@@ -8,6 +8,7 @@ export default class Document extends NextDocument {
           <meta name='viewport' content='width=device-width, initial-scale=1'/>
           <meta content="Homepage" name="description" />
           <meta content="website" property="og:type" />
+          <link href="//fonts.googleapis.com/css?family=Open+Sans:700|Open+Sans:800|Lato:300" rel="stylesheet" type="text/css"/>
         </Head>
         <body>
           <Main/>
