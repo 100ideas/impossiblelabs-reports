@@ -2,7 +2,7 @@ import TabletopMockData from '../components/MockTable'
 import Link from 'next/link'
 import Header from '../components/Header'
 
-export default ({sheet = TabletopMockData}) => (
+const PrintableTable = ({sheet = TabletopMockData}) => (
 
   <div className="center" id="main">
 
@@ -99,8 +99,12 @@ export default ({sheet = TabletopMockData}) => (
 
         </article>
       )}
-
     </section>
-</div>
-
+  </div>
 )
+
+PrintableTable.getInitialProps = ({ sheet }) => {
+  return { sheet: sheet }
+}
+
+export default PrintableTable

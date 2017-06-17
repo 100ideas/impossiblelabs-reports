@@ -1,36 +1,32 @@
-// import Tabletop from 'tabletop';
-import Layout from '../components/Layout'
+import React from 'react'
+var Tabletop = require('tabletop');
 import TabletopMockData from '../components/MockTable'
+import Layout from '../components/Layout'
 import ReportTable from '../components/ReportTable'
 
-const Index = (props) => (
-  <Layout>
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { sheet: [] };
+  }
 
-    <ReportTable sheet={props.sheet}/>
+  componentDidMount() {
+    this.setState({sheet: TabletopMockData});
 
-  </Layout>
-)
+    Tabletop.init({
+      debug: 'true',
+      key: '1cV3TS_3zZMfydUjCLUnRpMfo7GnN0Zc6iCPeibYTbDE',
+      callback: function(data, tabletop) {
+        this.setState({sheet: data});
+        console.dir(data);
+      }.bind(this),
+      simpleSheet: true
+    });
+  }
 
-Index.getInitialProps = async function() {
-
-  // var table;
-  // Tabletop.init({
-  //   key: '1cV3TS_3zZMfydUjCLUnRpMfo7GnN0Zc6iCPeibYTbDE',
-  //   callback: function(data, tabletop) {
-  //     table = data;
-  //   },
-  //   simpleSheet: true
-  // });
-  //
-  // const res = await fetch('https://hook.io/100ideas/fakerjs-storyprinter?numstories=6')
-  // const data = await res.json()
-  //
-  // console.log(`tabletop fetched ${data.length} rows`)
-
-  return {
-    // sheet: data
-    sheet: TabletopMockData
+  render() {
+    // return <div>{JSON.stringify(this.state.sheet)}</div>
+    return <Layout> <ReportTable sheet={this.state.sheet}/> </Layout>
+    // return <Layout> {JSON.stringify(this.state.sheet)} </Layout>
   }
 }
-
-export default Index

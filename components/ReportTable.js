@@ -6,7 +6,7 @@ export default ({sheet}) => (
 
     <section className="pt3 w-100 center">
       <h1 className="tc white f1 fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
-      <Link href="/ReportTablePrint">
+      <Link href={{ pathname: 'ReportTablePrint', sheet: sheet}} >
         <h2 className="mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked silver">switch to print layout</h2>
       </Link>
     </section>

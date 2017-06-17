@@ -50,7 +50,7 @@ export default () => (
     }
   `}</style>
 
-    <a href="http://impossiblelabs.io/" className="grow" id="logo"></a>
+    <a href="/" className="grow" id="logo"></a>
 
     <nav>
       <ul className="">
