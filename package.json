@@ -1,0 +1,24 @@
+{
+  "name": "impossiblelabs",
+  "description": "dynamic fetch data from google sheets (tabletop); display as table w/ tachyons css",
+  "dependencies": {
+    "next": "latest",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-jsx-postcss": "^0.2.0",
+    "tabletop": "^1.5.2",
+    "tachyons": "^4.7.4"
+  },
+  "babel": {
+    "presets": [
+      "./babel-preset"
+    ]
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
