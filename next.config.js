@@ -1,6 +1,7 @@
 module.exports = {
   webpack: (config) => {
-//     // const webpack = require('webpack')
+    // fuck you Tabletop-Webpack >:(
+    // https://github.com/facebookincubator/create-react-app/pull/672/files
     config.node = {
       fs: 'empty',
       net: 'empty',
@@ -9,14 +10,3 @@ module.exports = {
     return config
   }
 }
-
-// module.exports = {
-//   webpack: function (config) {
-//     if (config.resolve.alias) {
-//       delete config.resolve.alias['net']
-//       delete config.resolve.alias['tls']
-//       delete config.resolve.alias['fs']
-//     }
-//     return config
-//   }
-// }

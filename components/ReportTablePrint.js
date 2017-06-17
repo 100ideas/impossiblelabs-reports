@@ -1,8 +1,7 @@
-import TabletopMockData from '../components/MockTable'
 import Link from 'next/link'
 import Header from '../components/Header'
 
-const PrintableTable = ({sheet = TabletopMockData}) => (
+const ReportTablePrint = ({props, viewStateToggler}) => (
 
   <div className="center" id="main">
 
@@ -63,13 +62,16 @@ const PrintableTable = ({sheet = TabletopMockData}) => (
       <h1 className="dib flex-none mb0 f1 fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
     </section>
 
-    <Link href="/" className="noprint">
-      <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked white">switch back to screen layout</h2>
-    </Link>
+    {/* <Link href="/" className="noprint"> */}
+      <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked white"
+        onClick={(e)=>{viewStateToggler()}}>
+          switch back to screen layout
+      </h2>
+    {/* </Link> */}
 
     <section className="cf" id="print">
 
-      {sheet.map((row, index) =>
+      {props.sheet.map((row, index) =>
         <article className="fl w-100 pv4 o-100 dt avenir bt b--black" key={index}>
 
           <div className="dtc w-10">
@@ -99,12 +101,9 @@ const PrintableTable = ({sheet = TabletopMockData}) => (
 
         </article>
       )}
+
     </section>
   </div>
 )
 
-PrintableTable.getInitialProps = ({ sheet }) => {
-  return { sheet: sheet }
-}
-
-export default PrintableTable
+export default ReportTablePrint

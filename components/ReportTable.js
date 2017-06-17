@@ -1,19 +1,22 @@
 import Link from 'next/link'
 
-export default ({sheet}) => (
+const ReportTable = ({props, viewStateToggler}) => (
 
   <div className="center mw8-ns">
 
     <section className="pt3 w-100 center">
       <h1 className="tc white f1 fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
-      <Link href={{ pathname: 'ReportTablePrint', sheet: sheet}} >
-        <h2 className="mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked silver">switch to print layout</h2>
-      </Link>
+      {/* <Link href={{ pathname: 'ReportTablePrint', sheet: sheet}} > */}
+        <h2 className="mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked silver"
+            onClick={(e)=>{viewStateToggler()}}>
+              switch to print layout
+        </h2>
+      {/* </Link> */}
     </section>
 
     <section className="ph4 bg-black o-80 mh5-ns cf print">
 
-      {sheet.map((row, index) =>
+      {props.sheet.map((row, index) =>
         <article className="fl w-100 pv4 o-100 dt-ns dt--fixed-ns avenir bb b--white-10 print" key={index}>
 
           <div className="dtc w-10">
@@ -49,3 +52,4 @@ export default ({sheet}) => (
     </section>
   </div>
 )
+export default ReportTable

@@ -3,12 +3,20 @@ var Tabletop = require('tabletop');
 import TabletopMockData from '../components/MockTable'
 import Layout from '../components/Layout'
 import ReportTable from '../components/ReportTable'
+import ReportTablePrint from '../components/ReportTablePrint'
 
 export default class extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { sheet: [] };
+    this.state = { sheet: [], printView: false };
   }
+
+  viewStateToggler = (value, e) => {
+    console.log(e, value);
+    this.setState((prevState, props) => ({
+      printView: !prevState.printView
+    }));
+  };
 
   componentDidMount() {
     this.setState({sheet: TabletopMockData});
@@ -26,7 +34,16 @@ export default class extends React.Component {
 
   render() {
     // return <div>{JSON.stringify(this.state.sheet)}</div>
-    return <Layout> <ReportTable sheet={this.state.sheet}/> </Layout>
+
+    return (
+      <div>
+        {this.state.printView ? (
+          <ReportTablePrint props={this.state} viewStateToggler={this.viewStateToggler} />
+        ) : (
+          <Layout> <ReportTable props={this.state} viewStateToggler={this.viewStateToggler}/> </Layout>
+        )}
+      </div>
+    )
     // return <Layout> {JSON.stringify(this.state.sheet)} </Layout>
   }
 }
