@@ -10,7 +10,9 @@ const Index = (props) => (
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        background: url(/static/dark-stars.jpg) no-repeat center fixed;
+        @media screen {
+          background: url(/static/dark-stars.jpg) no-repeat center fixed;
+        }
       }
     `}</style>
 
