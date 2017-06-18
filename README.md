@@ -5,9 +5,9 @@ demo https://impossiblelabs-reports.now.sh
 ## architecture
 + tachyons css via [mikker/nextjs-with-tachyons](https://github.com/mikker/nextjs-with-tachyons)
 + dynamic fetching of google sheet data with [tabletop](https://github.com/jsoma/tabletop)
++ simple [next.js](https://github.com/zeit/next.js) app w/ react controlled component for rendering web-or-print view of table
 + [example pdf](https://github.com/100ideas/impossiblelabs-reports/blob/master/static/impossiblelabs-reports.now.sh.pdf)  printed-to-pdf from browser styled w/ `@media print` css
-
-![screenshot](https://github.com/100ideas/impossiblelabs-reports/raw/master/static/2017-06-17_impossiblelabs-reports-screenshot.png)
++ ![screenshot](https://github.com/100ideas/impossiblelabs-reports/raw/master/static/2017-06-17_impossiblelabs-reports-screenshot.png)
 
 ## todo
 - consider how caching might work (simple memory db? or fs?)
