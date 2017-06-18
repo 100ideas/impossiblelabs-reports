@@ -21,6 +21,9 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
           background: black;
           color: white;
         }
+        #subtitle h1 {
+          font-size: 3rem;
+        }
         header {
           display: none;
         }
@@ -45,9 +48,20 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
         }
         #subtitle {
           color: black;
+          padding-bottom: 0 !important;
         }
         #subtitle img {
           display: none;
+        }
+        screen and (min-width: 34em) {
+          #subtitle h1 {
+            font-size: 3rem;
+          }
+        }
+        screen and (max-width: 34em) {
+          #subtitle h1 {
+            font-size: 1.5rem;
+          }
         }
         #print {
           margin: 0rem;
@@ -59,7 +73,7 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
 
     <section className="pv3 w-100 flex flex-row items-center content-center justify-center" id="subtitle">
       <img className="dib w-25 flex-none onlyprint" src='/static/logo.png' alt='impossible labs' />
-      <h1 className="dib flex-none mb0 f1-ns f3 fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
+      <h1 className="dib flex-none mv2 v-mid f1-ns fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
     </section>
 
     {/* <Link href="/" className="noprint"> */}
