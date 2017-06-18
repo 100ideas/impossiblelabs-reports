@@ -1,6 +1,9 @@
 {
-  "name": "impossiblelabs",
+  "name": "impossiblelabs-reports",
   "description": "dynamic fetch data from google sheets (tabletop); display as table w/ tachyons css",
+  "author": "Mac Cowell / @100ideas",
+  "license": "MIT",
+  "version": "1.0.0",
   "dependencies": {
     "next": "beta",
     "postcss-cssnext": "^2.11.0",
