@@ -5,10 +5,11 @@ export default class Document extends NextDocument {
     return (
       <html>
         <Head>
-          {/* <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" /> */}
-          <script src="/static/jquery.min.js"></script>
-          <link rel="stylesheet" href="/static/bootstrap.min.css" />
+          <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          {/* <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" /> */}
+          {/* <script src="/static/jquery.min.js"></script>
+          <link rel="stylesheet" href="/static/bootstrap.min.css" /> */}
           <meta name='viewport' content='width=device-width, initial-scale=1'/>
           <meta content="Homepage" name="description" />
           <meta content="website" property="og:type" />
