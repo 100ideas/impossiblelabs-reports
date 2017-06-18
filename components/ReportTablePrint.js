@@ -63,7 +63,7 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
     </section>
 
     {/* <Link href="/" className="noprint"> */}
-      <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked white"
+      <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked grey"
         onClick={(e)=>{viewStateToggler()}}>
           switch back to screen layout
       </h2>
