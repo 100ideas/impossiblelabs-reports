@@ -6,6 +6,8 @@ demo https://impossiblelabs-reports.now.sh
 + tachyons css via [mikker/nextjs-with-tachyons](https://github.com/mikker/nextjs-with-tachyons)
 + dynamic fetching of google sheet data with [tabletop](https://github.com/jsoma/tabletop)
 
+![screenshot](https://github.com/100ideas/impossiblelabs-reports/raw/master/static/2017-06-17_impossiblelabs-reports-screenshot.png)
+
 ## todo
 - consider how caching might work (simple memory db? or fs?)
   - convert [tabletop caching/local.py](https://github.com/jsoma/tabletop/blob/master/caching/local.py) script to node
