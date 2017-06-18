@@ -59,11 +59,11 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
 
     <section className="pv3 w-100 flex flex-row items-center content-center justify-center" id="subtitle">
       <img className="dib w-25 flex-none onlyprint" src='/static/logo.png' alt='impossible labs' />
-      <h1 className="dib flex-none mb0 f1 fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
+      <h1 className="dib flex-none mb0 f1-ns f3 fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
     </section>
 
     {/* <Link href="/" className="noprint"> */}
-      <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked grey"
+      <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked light-silver"
         onClick={(e)=>{viewStateToggler()}}>
           switch back to screen layout
       </h2>
@@ -80,11 +80,11 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
             }
           </div>
 
-          <div className="dtc v-top pl3 black w-90">
+          <div className="dtc v-top pl3-ns pl1 black w-90">
 
             <div className="v-top dib mb1 w-100 relative">
               <h1 className="dib f4 fw6 lh-title mv0 ttu tracked">{row.name}</h1>
-              <h2 className="absolute top-0 right-0 tr flr f6 fw4 mt2 mb0 underline">{row.url}</h2>
+              <h2 className="absolute-ns top-0-ns right-0-ns tr-ns tl flr f6 fw4 mt2 mb0 underline">{row.url}</h2>
               {/* <h2 className="dib f6 black underline pl3">{row.url}</h2> */}
             </div>
 
@@ -93,7 +93,7 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
               <h2 className="f6 fw4 mv1 lh-copy">{row.tags}</h2>
             </div>
 
-            <div className="dib pt1 pl3 black w-70 f5 fw4 lh-copy" style={{textAlign: 'justify'}}>
+            <div className="dib pt1 pl3 pr0-ns pr2 black w-70 f5-ns f6 fw4 lh-copy" style={{textAlign: 'justify'}}>
               {row.description}
             </div>
 
