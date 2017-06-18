@@ -89,22 +89,23 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
         <article className="fl w-100 pv4 o-100 dt avenir bt b--black" key={index}>
 
           <div className="dtc w-10">
-            {row.logo != '' &&
-              <img src={row.logo} alt={`${row.name} logo`} className="db w-100"/>
+            {row.Url != '' &&
+              <img src={'http://logo.clearbit.com/' + row.Url} alt={`${row.Name} logo`} className="db w-100"/>
             }
           </div>
 
           <div className="dtc v-top pl3-ns pl1 black w-90">
 
             <div className="v-top dib mb1 w-100 relative">
-              <h1 className="dib f4 fw6 lh-title mv0 ttu tracked">{row.name}</h1>
-              <h2 className="absolute-ns top-0-ns right-0-ns tr-ns tl flr f6 fw4 mt2 mb0 underline">{row.url}</h2>
+              <h1 className="dib f4 fw6 lh-title mv0 ttu tracked">{row.Name}</h1>
+              <h2 className="absolute-ns top-0-ns right-0-ns tr-ns tl flr f6 fw4 mt2 mb0 underline">{row.Url}</h2>
               {/* <h2 className="dib f6 black underline pl3">{row.url}</h2> */}
             </div>
 
             <div className="dib v-top mb3 pl0 black w-30">
-              <h2 className="f6 fw4 mv1 lh-copy i">{row.location}</h2>
-              <h2 className="f6 fw4 mv1 lh-copy">{row.tags}</h2>
+              <h2 className="f6 fw4 mv1 lh-copy i">{row.Location}</h2>
+              <h2 className="f6 fw4 mv1 lh-copy">{row.Type}</h2>
+              <h2 className="f6 fw4 mv1 lh-copy">{row.Domain}</h2>
             </div>
 
             <div className="dib pt1 pl3 pr0-ns pr2 black w-70 f5-ns f6 fw4 lh-copy" style={{textAlign: 'justify'}}>

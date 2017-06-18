@@ -23,7 +23,8 @@ export default class extends React.Component {
 
     Tabletop.init({
       debug: 'true',
-      key: '1cV3TS_3zZMfydUjCLUnRpMfo7GnN0Zc6iCPeibYTbDE',
+      key: '1cV3TS_3zZMfydUjCLUnRpMfo7GnN0Zc6iCPeibYTbDE',   // mock data
+      // key: '1JBk_BOSJjym3PWzrsgyylFrvAU5zeRLigyqkfFFif94',      // real data - TODO needs to be "published"
       callback: function(data, tabletop) {
         this.setState({sheet: data});
         console.dir(data);
