@@ -34,7 +34,6 @@ export default class extends React.Component {
   }
 
   render() {
-    // return <div>{JSON.stringify(this.state.sheet)}</div>
 
     return (
       <div>
@@ -45,6 +44,6 @@ export default class extends React.Component {
         )}
       </div>
     )
-    // return <Layout> {JSON.stringify(this.state.sheet)} </Layout>
+    
   }
 }

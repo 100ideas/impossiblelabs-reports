@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Header from '../components/Header'
+import GetLogo from '../components/GetLogo'
 
 const ReportTablePrint = ({props, viewStateToggler}) => (
 
@@ -76,30 +77,25 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
       <h1 className="dib flex-none mv2 v-mid f1-ns fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
     </section>
 
-    {/* <Link href="/" className="noprint"> */}
       <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked light-silver"
         onClick={(e)=>{viewStateToggler()}}>
           switch back to screen layout
       </h2>
-    {/* </Link> */}
 
     <section className="cf" id="print">
 
       {props.sheet.map((row, index) =>
         <article className="fl w-100 pv4 o-100 dt avenir bt b--black" key={index}>
 
-          <div className="dtc w-10">
-            {row.Url != '' &&
-              <img src={'http://logo.clearbit.com/' + row.Url} alt={`${row.Name} logo`} className="db w-100"/>
-            }
+          <div className="dtc pt1 w-10">
+            <GetLogo path={row.Url}/>
           </div>
 
-          <div className="dtc v-top pl3-ns pl1 black w-90">
+          <div className="dtc v-top pl3 black w-90">
 
             <div className="v-top dib mb1 w-100 relative">
               <h1 className="dib f4 fw6 lh-title mv0 ttu tracked">{row.Name}</h1>
               <h2 className="absolute-ns top-0-ns right-0-ns tr-ns tl flr f6 fw4 mt2 mb0 underline">{row.Url}</h2>
-              {/* <h2 className="dib f6 black underline pl3">{row.url}</h2> */}
             </div>
 
             <div className="dib v-top mb3 pl0 black w-30">
@@ -109,7 +105,7 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
             </div>
 
             <div className="dib pt1 pl3 pr0-ns pr2 black w-70 f5-ns f6 fw4 lh-copy" style={{textAlign: 'justify'}}>
-              {row.description}
+              {row.Description}
             </div>
 
           </div>
