@@ -20,12 +20,13 @@
     ]
   },
   "now": {
-    "alias": "impossiblelabs-reports",
+    "alias": "impossiblelabs-reports.now.sh",
     "scale": "1 1"
   },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "now && now alias"
   }
 }
