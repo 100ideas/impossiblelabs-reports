@@ -22,23 +22,24 @@ const ReportTable = ({props, viewStateToggler}) => (
 
       {props.sheet.map((row, index) =>
         <article className="fl w-100 pv4 o-100 dt-ns dt--fixed-ns avenir bb b--white-10 print" key={index}>
+          {/* {console.dir(row)} */}
 
           <div className="dtc pt1 w-10">
-              <a href={row.Url} className="grow db">
-                <GetLogo path={row.Url}/>
+              <a href={row.URL} className="grow db">
+                <GetLogo path={row.URL}/>
               </a>
           </div>
 
           <div className="dtc v-top pl3 pl4-ns white w-90">
 
             <div className="v-top dib mb1 w-100">
-              <a href={row.url} className="link blue hover-red">
+              <a href={row.URL} className="link blue hover-red">
                 <h1 className="f4 fw6 lh-title mv0 ttu tracked">{row.Name}</h1>
               </a>
             </div>
 
             <div className="dib v-top mb3 pl0 white w-100 w-30-ns">
-              <h2 className="f6 fw4 mt2 mb0">{row.Location}</h2>
+              <h2 className="f6 fw4 mt2 mb0">{row.City} {row['State or Country']}</h2>
               <h2 className="f6 fw4 mt2 mb0">{row.Type}</h2>
               <h2 className="f6 fw4 mt2 mb0">{row.Domain}</h2>
             </div>

@@ -19,6 +19,10 @@
       "./babel-preset"
     ]
   },
+  "now": {
+    "alias": "impossiblelabs-reports",
+    "scale": "1 1"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",

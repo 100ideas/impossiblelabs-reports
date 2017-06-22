@@ -88,18 +88,18 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
         <article className="fl w-100 pv4 o-100 dt avenir bt b--black" key={index}>
 
           <div className="dtc pt1 w-10">
-            <GetLogo path={row.Url}/>
+            <GetLogo path={row.URL}/>
           </div>
 
           <div className="dtc v-top pl3 black w-90">
 
             <div className="v-top dib mb1 w-100 relative">
               <h1 className="dib f4 fw6 lh-title mv0 ttu tracked">{row.Name}</h1>
-              <h2 className="absolute-ns top-0-ns right-0-ns tr-ns tl flr f6 fw4 mt2 mb0 underline">{row.Url}</h2>
+              <h2 className="absolute-ns top-0-ns right-0-ns tr-ns tl flr f6 fw4 mt2 mb0 underline">{row.URL}</h2>
             </div>
 
             <div className="dib v-top mb3 pl0 black w-30">
-              <h2 className="f6 fw4 mv1 lh-copy i">{row.Location}</h2>
+              <h2 className="f6 fw4 mv1 lh-copy i">{row.City} {row['State or Country']}</h2>
               <h2 className="f6 fw4 mv1 lh-copy">{row.Type}</h2>
               <h2 className="f6 fw4 mv1 lh-copy">{row.Domain}</h2>
             </div>

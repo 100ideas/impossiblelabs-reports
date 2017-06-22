@@ -3,8 +3,7 @@ import Header from './Header'
 
 export default ({ children, title = 'This is the default title' }) => (
 
-  <main className="cover">
-
+  <main className="cover min-vh-100">
     <style jsx>{`
       main {
         background: url(/static/dark-stars.jpg) no-repeat center fixed;

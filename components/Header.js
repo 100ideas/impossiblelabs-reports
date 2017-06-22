@@ -91,9 +91,9 @@ export default () => (
     <a href="/" className="grow" id="logo"></a>
 
     <nav>
-      <a href="#" id="menu-icon"></a>
+      <a href="http://impossiblelabs.io" id="menu-icon"></a>
       <ul className="">
-        <li><a href="/">HOME</a></li>
+        <li><a href="http://impossiblelabs.io">HOME</a></li>
         <li><a href="http://impossiblelabs.io/manifesto">MANIFESTO</a></li>
         <li><a href="http://impossiblelabs.io/team">TEAM</a></li>
         <li><a href="https://medium.com/impossible-labs" target="_blank">BLOG</a></li>
