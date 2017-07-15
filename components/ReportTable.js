@@ -25,7 +25,7 @@ const ReportTable = ({props, viewStateToggler}) => (
           {/* {console.dir(row)} */}
 
           <div className="dtc pt1 w-10">
-              <a href={row.URL} className="grow db">
+              <a href={row.URL} target="_blank" className="grow db">
                 <GetLogo path={row.URL}/>
               </a>
           </div>
@@ -42,6 +42,7 @@ const ReportTable = ({props, viewStateToggler}) => (
               <h2 className="f6 fw4 mt2 mb0">{row.City} {row['State or Country']}</h2>
               <h2 className="f6 fw4 mt2 mb0">{row.Type}</h2>
               <h2 className="f6 fw4 mt2 mb0">{row.Domain}</h2>
+              <h2 className="f6 fw4 mv1 lh-copy">{row.Pilot}</h2>
             </div>
 
             <div className="dib pt1 pl2-ns white w-100 w-70-ns f5 fw4 measure-wide-ns lh-copy" style={{textAlign: 'justify'}}>

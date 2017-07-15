@@ -17,8 +17,12 @@ const getlogo = (path = '') => {
 // lol
 // const loadDefaultImg = (e) => e.target.src = 'http://www.fillmurray.com/128/128'
 const hideMissingImg = (e) => {
-  e.target.style = 'display: none';
-  e.target.onload = (e) => e.target.style = 'display: inherit';
+  // hide the image
+  //e.target.style = 'display: none';
+  //e.target.onload = (e) => e.target.style = 'display: inherit';
+  
+  // display default image
+  e.target.src = 'http://impossiblelabs.io/img/reports-default-img.png'
 }
 
 export default ({ path }) => (

@@ -23,7 +23,7 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
           color: white;
         }
         #subtitle h1 {
-          font-size: 3rem;
+          font-size: 2rem;
         }
         header {
           display: none;
@@ -74,7 +74,7 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
 
     <section className="pv3 w-100 flex flex-row items-center content-center justify-center" id="subtitle">
       <img className="dib w-25 flex-none onlyprint" src='/static/logo.png' alt='impossible labs' />
-      <h1 className="dib flex-none mv2 v-mid f1-ns fw9 b lh-solid tracked-tight sans-serif ttu">Project 2050 Report</h1>
+      <h1 className="dib flex-none mv2 v-mid f1-ns fw9 b lh-solid tracked-tight sans-serif ttu">Preliminary Project 2050 Report</h1>
     </section>
 
       <h2 className="noprint mv2 tc db link bg-animate hover-dark-red pointer sans-serif f5 fw3 tracked light-silver"
@@ -101,7 +101,8 @@ const ReportTablePrint = ({props, viewStateToggler}) => (
             <div className="dib v-top mb3 pl0 black w-30">
               <h2 className="f6 fw4 mv1 lh-copy i">{row.City} {row['State or Country']}</h2>
               <h2 className="f6 fw4 mv1 lh-copy">{row.Type}</h2>
-              <h2 className="f6 fw4 mv1 lh-copy">{row.Domain}</h2>
+              <h2 className="f6 fw4 mv1 lh-copy"><strong>{row.Domain}</strong></h2>
+               <h2 className="f6 fw4 mv1 lh-copy">{row.Pilot}</h2>
             </div>
 
             <div className="dib pt1 pl3 pr0-ns pr2 black w-70 f5-ns f6 fw4 lh-copy" style={{textAlign: 'justify'}}>
